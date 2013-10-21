@@ -1,0 +1,6 @@
+SetEnv PHP_VER 5
+Options -Indexes
+Options -MultiViews
+RewriteEngine on
+RewriteCond $1 !^(index\.php|styles/|images/|avatars/|photos/|captcha/|audio/|fonts/|js/|jq/|php/|robots\.txt)
+RewriteRule !\.(js|ico|gif|jpg|png|css|pdf)$ index.php [L] 
