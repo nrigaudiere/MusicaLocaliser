@@ -1,0 +1,24 @@
+header{background-color: #123456;}
+
+.line{background-color: #123456; border-top: outset 2px;}
+
+.wrapper{background-color: #123456; width:100%; height:100%;color: white; font-size: 180%;}
+.homeleft{ float:left;margin-top: 235px; padding-left: 300px; margin-right:0px;background-color: #123456;}
+.homeright{float:right; background-color: #123456;}
+.logo {margin-top:10%;margin-bottom	:25%; margin-left:0%; float:left;} 
+.benchmark{color : #FFFFFF;}
+
+
+.wrapper a {color:#FFFFFF; text-shadow: 0.1em 0.1em 0.05em #000000;}
+a:hover {text-decoration: none !important; color: #3A5392 !important;  text-shadow: 0.2em 0.2em 0.2em #000000;}
+
+footer {background-image: url(../bg-footer.png); background-position: center; text-align: center; border-top: outset 2px;}
+footer a {color: #AAAAAA;}
+[class*="span"]
+{}
+
+[class="container-fluid"]
+{background-color: #123456;}
+
+[class="span5"]
+{color: white;}
