@@ -10,8 +10,11 @@ class Search extends CI_Controller
      
     public function index()
     {
+<<<<<<< HEAD
     	/* MAP */
 		
+=======
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
     	$this->load->library('Googlemaps');
 		 
 		$config = array();
@@ -37,6 +40,7 @@ class Search extends CI_Controller
 		 
 		$this->googlemaps->add_marker($marker);
 		
+<<<<<<< HEAD
 		
 		/* END MAP */
 		
@@ -67,5 +71,11 @@ class Search extends CI_Controller
     }
 	
 	
+=======
+		$data['map'] = $this->googlemaps->create_map();
+		 
+		$this->load->view('search_view', $data);  
+    }
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 
 }

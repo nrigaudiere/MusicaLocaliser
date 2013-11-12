@@ -54,7 +54,10 @@ $autoload['packages'] = array();
 
 $autoload['libraries'] = array('database','session','form_validation','email');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 /*
 | -------------------------------------------------------------------
 |  Auto-load Helper Files

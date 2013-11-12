@@ -21,6 +21,7 @@ class Add extends CI_Controller
 	
 	public function newshop()
 	{
+<<<<<<< HEAD
 		$config['upload_path']= './assets/img/shoppictures';
 		$config['allowed_types']= 'jpg|png|gif|bmp|jpeg';
 		$config['max_size']= '150000';
@@ -87,6 +88,36 @@ class Add extends CI_Controller
 				//redirect(site_url("/home"));
 			}
 		}
+=======
+		$this->form_validation->set_rules('name', 'Name', 'trim|required|xss_clean');
+				$this->form_validation->set_rules('address', 'Address', 'trim|xss_clean|required');
+				$this->form_validation->set_rules('zip', 'Zip Code', 'trim|required|xss_clean|numeric|max_length[5]');
+				$this->form_validation->set_rules('city', 'City', 'trim|xss_clean');
+				
+				$this->form_validation->set_rules('country', 'Country', 'trim|required|xss_clean');
+				$this->form_validation->set_rules('description', 'Description', 'trim|required|xss_clean');
+				$this->form_validation->set_rules('type', 'Type', 'trim|xss_clean|required');
+				
+				
+				//Check new form
+				if($this->form_validation->run())
+			 	{
+					
+			 		$data = array(
+					'name'=>$this->input->post('name'),
+					'address'=>$this->input->post('address'),
+					'zip'=> $this->input->post('zip'),
+					'city'=> $this->input->post('city'),
+					'country'=> $this->input->post('country'),
+					'description'=> $this->input->post('description'),
+					'type'=> $this->input->post('type')
+					);
+					
+					$this->dataaccess->addShop($data);
+					
+					redirect(site_url("/home"));
+				}
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 	}			
 
 }

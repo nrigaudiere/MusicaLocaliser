@@ -14,7 +14,11 @@
 | path to your installation.
 |
 */
+<<<<<<< HEAD
 $config['base_url']	= '';
+=======
+$config['base_url']	= 'http://nrigaudiere.percephone.com';
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +30,11 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
+<<<<<<< HEAD
 $config['index_page'] = 'index.php';
+=======
+$config['index_page'] = '';
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 
 /*
 |--------------------------------------------------------------------------
@@ -246,7 +254,11 @@ $config['encryption_key'] = 'assignement';
 */
 $config['sess_cookie_name']		= 'ci_session';
 $config['sess_expiration']		= 7200;
+<<<<<<< HEAD
 $config['sess_expire_on_close']	= FALSE;
+=======
+$config['sess_expire_on_close']	= TRUE;
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 $config['sess_encrypt_cookie']	= FALSE;
 $config['sess_use_database']	= FALSE;
 $config['sess_table_name']		= 'ci_sessions';

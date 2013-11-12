@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header{background-color: #123456;}
 
 .line{background-color: #123456; border-top: outset 2px;}
@@ -16,6 +17,18 @@ footer {background-image: url(../bg-footer.png); background-position: center; te
 footer a {color: #AAAAAA;}
 [class*="span"]
 {}
+=======
+header{background-color: #123456; }
+
+.wrapper{background-color: #123456; width:100%;}
+.homeleft{ float:left;margin-top: 235px; padding-left: 300px; margin-right:0px;background-color: #123456;}
+.homeright{float:right; background-color: #123456;}
+.logo {margin-top:10%;margin-bottom	:25%; margin-left:0%; float:left;} 
+
+
+[class*="span"]
+{background-color: #123456;}
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 
 [class="container-fluid"]
 {background-color: #123456;}

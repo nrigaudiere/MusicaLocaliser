@@ -14,6 +14,7 @@ class Dataaccess extends CI_Model
 	{
 		$this->db->insert('nr_shop',$data); 
 	}
+<<<<<<< HEAD
 	
 	public function getShop()
 	{
@@ -27,4 +28,6 @@ class Dataaccess extends CI_Model
 						->get()
 						->result_array();
 	}
+=======
+>>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 }
