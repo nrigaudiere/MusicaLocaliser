@@ -1,34 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
 	<name>MusicaLocaliser</name>
-=======
-	<name>MusicaLocaliserOnline</name>
->>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
-<<<<<<< HEAD
 	</buildSpec>
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
 		<nature>com.aptana.editor.php.phpNature</nature>
-=======
-		<buildCommand>
-			<name>com.aptana.editor.php.aptanaPhpBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.aptana.ide.core.unifiedBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-	</buildSpec>
-	<natures>
-		<nature>com.aptana.editor.php.phpNature</nature>
-		<nature>com.aptana.projects.webnature</nature>
->>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 	</natures>
 </projectDescription>

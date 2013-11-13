@@ -2,6 +2,6 @@
 	
 	<?php echo var_dump($updata);?>
 	
-	<?php echo var_dump($rs);?>
+	<?php echo $rs;?>
 	
 </body></html>

@@ -10,11 +10,8 @@ class Search extends CI_Controller
      
     public function index()
     {
-<<<<<<< HEAD
     	/* MAP */
 		
-=======
->>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
     	$this->load->library('Googlemaps');
 		 
 		$config = array();
@@ -34,13 +31,11 @@ class Search extends CI_Controller
 		
 		
 		$marker = array(); 
-		$marker['onclick'] = 'alert(\'You just clicked at: \' + event.latLng.lat() + \', \' + event.latLng.lng());'; 
 		
 		$marker['icon'] = base_url().'/assets/img/misc/marker.png';
 		 
 		$this->googlemaps->add_marker($marker);
 		
-<<<<<<< HEAD
 		
 		/* END MAP */
 		
@@ -55,6 +50,12 @@ class Search extends CI_Controller
 			$marker['position'] = $shop['address'] .',' . $shop['zip'] . ',' . $shop['city'] . ',' . $shop['country'];
 			
 			$marker['icon'] = base_url() . $shop['path'];
+			$marker['infowindow_content'] = "<b>" .$shop['name'] ."</b><br>" . 
+											$shop['address'] ."<br>"  . 
+											$shop['zip'] .", "  . 
+											$shop['city'] ."<br>"  . 
+											$shop['country'] ."<br>"  . 
+											$shop['description'];
 			$this->googlemaps->add_marker($marker);
 			
 		}
@@ -71,11 +72,5 @@ class Search extends CI_Controller
     }
 	
 	
-=======
-		$data['map'] = $this->googlemaps->create_map();
-		 
-		$this->load->view('search_view', $data);  
-    }
->>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 
 }

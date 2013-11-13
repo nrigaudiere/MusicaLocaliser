@@ -48,17 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-<<<<<<< HEAD
-$db['default']['hostname'] = '127.0.0.1';
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['database'] = 'musicalocaliser';
-=======
-$db['default']['hostname'] = 'mysql51-73.perso';
-$db['default']['username'] = 'percephonesql';
-$db['default']['password'] = 'cJlTM2os';
-$db['default']['database'] = 'percephonesql';
->>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

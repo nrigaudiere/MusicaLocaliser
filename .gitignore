@@ -1,15 +1,1 @@
 .DS_Store
-
-application/cache/*
-!application/cache/index.html
-!application/cache/.htaccess
-
-application/logs/*
-!application/logs/index.html
-<<<<<<< HEAD
-!application/logs/.htaccess
-=======
-!application/logs/.htaccess*.class
-*.pyc
-*.pyo
->>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9

@@ -14,11 +14,15 @@ class Dataaccess extends CI_Model
 	{
 		$this->db->insert('nr_shop',$data); 
 	}
-<<<<<<< HEAD
 	
-	public function getShop()
+	
+	
+	public function getShop($id)
 	{
-		
+		return $this->db->select('*')
+						->from('nr_shop')
+						->where('id', $id)
+						->get()->result();
 	}
 	
 	public function getAllShops()
@@ -28,6 +32,9 @@ class Dataaccess extends CI_Model
 						->get()
 						->result_array();
 	}
-=======
->>>>>>> ace4e05fe83b2c955d56946afca5a634dbbe97d9
+	
+	public function deleteShop($name)
+	{
+		$this->db->delete('nr_shop', array('name' => $name));
+	}
 }
