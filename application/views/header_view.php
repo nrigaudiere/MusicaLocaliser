@@ -27,6 +27,19 @@
 				<div class="span6">
 					<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo.png" width="35%"/> </a>
 				</div>
+				<div class="span5 text-right">
+					<?php $session_id = $this->session->userdata('logged');
+						if($session_id == true): ?>
+						
+						<a href="<?php echo base_url()?>administrate" id="logged">Administrate</a>
+						<a href="<?php echo base_url()?>login/logout" id="logged">Log Out</a>
+						
+						<?php else:?>
+							
+							<a href="<?php echo base_url()?>login" id="login">Login</a>
+						
+						<?php endif;?>
+				</div>
 			<div id="name">
 			  
 			</div>>

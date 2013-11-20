@@ -17,10 +17,10 @@ class Contact extends CI_Controller
 	
 	function contact()
 	{
-		$this->form_validation->set_rules('nom','Nom','trim|required|xss_clean');
+		$this->form_validation->set_rules('nom','Name','trim|required|xss_clean');
 		$this->form_validation->set_rules('email','Email','trim|required|xss_clean|valid_email');
-		$this->form_validation->set_rules('sujet','Sujet','trim|required|xss_clean');
-		$this->form_validation->set_rules('message','Votre Message','trim|required|xss_clean');
+		$this->form_validation->set_rules('sujet','Subject','trim|required|xss_clean');
+		$this->form_validation->set_rules('message','Message','trim|required|xss_clean');
 		
 		if($this->form_validation->run())
 		{
@@ -31,9 +31,13 @@ class Contact extends CI_Controller
 			'message'=> $this->input->post('message')
 			);
 			
+			$config = $this->config();
+			
+			$this->load->library('email', $config);
+			
 			/*Envoi d'email de confirmation*/
 			$this->email->from($this->input->post('email'), $this->input->post('nom'));
-			$this->email->to('nrigaudiere@percephone.com', 'Admin');
+			$this->email->to('nicolas.rigaudiere@gmail.com', 'Admin');
 			$this->email->subject($this->input->post('sujet'));
 			$this->email->message($this->input->post('message'));
 			
@@ -53,4 +57,20 @@ class Contact extends CI_Controller
 
 				
 	}
+
+	public function config()
+	{
+		$config = Array(
+		  'protocol' => 'smtp',
+		  'smtp_host' => 'ssl://smtp.googlemail.com',
+		  'smtp_port' => 465,
+		  'smtp_user' => 'nicolas.rigaudiere@gmail.com', // change it to yours
+		  'smtp_pass' => '$RNRsw26!', // change it to yours
+		  'mailtype' => 'html',
+		  'charset' => 'iso-8859-1',
+		  'wordwrap' => TRUE
+		 );
+		  
+		  return $config;
+	} 
 }

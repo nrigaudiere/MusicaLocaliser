@@ -39,7 +39,7 @@
 				<div class="wrapper">
 				<div class="row-fluid">
 	
-					<h2>A Propos de</h2>
+					<h2>About Us</h2>
 	
 	
 					<p id="about">

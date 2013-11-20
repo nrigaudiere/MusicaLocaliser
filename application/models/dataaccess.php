@@ -2,6 +2,9 @@
  
 class Dataaccess extends CI_Model
 {
+	
+	/* POPULATE DROPDOWN LISTS */
+	
 	public function getCountries()
     {
 		return $this->db->select('*')
@@ -9,6 +12,29 @@ class Dataaccess extends CI_Model
 				->get()
 				->result();
     }
+	
+	public function getTypes()
+    {
+		$res = $this->db->select('*')
+                ->from('nr_type')
+				->get()
+				->result();
+				
+		 
+		$data = array();				
+		
+		foreach($res as $r)
+			$data[] = $r->type;
+		
+		
+		natcasesort($data);
+		
+		return $data;
+    }
+	
+	/* END POPULATE DROPDOWN LISTS */
+	
+	/* SHOPS MANAGEMENT */
 	
 	public function addShop($data)
 	{
@@ -33,8 +59,21 @@ class Dataaccess extends CI_Model
 						->result_array();
 	}
 	
-	public function deleteShop($name)
+	public function deleteShop($id)
 	{
-		$this->db->delete('nr_shop', array('name' => $name));
+		$this->db->delete('nr_shop', array('id' => $id));
 	}
+	
+	/* END SHOPS MANAGEMENT */
+	
+	/* ADMINISTRATE */
+	
+	public function getLogin()
+	{
+		return $this->db->select('*')
+						->from('nr_login')
+						->get()
+						->result_array();
+	}
+	
 }

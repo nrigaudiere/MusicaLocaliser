@@ -16,9 +16,18 @@ footer {background-image: url(../bg-footer.png); background-position: center; te
 footer a {color: #AAAAAA;}
 
 
+
+.error {color : red; font-size : 70%; font-style: italic;}
 #title {color:white; text-shadow: 0.15em 0.15em 0.05em #000000; font-size: 200%;}
+#login {color : #123456; margin-right: 2%;}
+#logged {color : #FFFFFF; text-shadow: 0.15em 0.15em 0.05em #000000; margin-right: 2%;}
 #element{width:100%;}
 #about {font-size: 55%;}
+#picture  {color : #a5a5a5;}
+
+#tableHead {color : #FFFFFF;}
+#tableBody {background-color: #AAAAAA;}
+#cross {width:50%; height:50%;}
 
 [class*="span"]
 {}

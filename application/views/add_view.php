@@ -23,17 +23,18 @@
 			
 			<!-- NAME -->
 				
-			<div class="row-fluid">
+			<div class="row-fluid has-success">
 				
 				<div class="span3 text-right">
 					<label for="name" class="control-label" width=100%>Name of the shop</label>
-					<?php echo form_error('name','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
 				<div class="span5">
 					<input type="text" name="name" value="<?php echo set_value('name');?>" autofocus id="element"/>
+					<?php echo form_error('name','<span class="error">', '</span><br>');?>
 				</div>
 			</div>
 			
@@ -43,13 +44,14 @@
 				
 				<div class="span3 text-right">
 					<label for="address" class="control-label" width=100%>Address</label>
-					<?php echo form_error('address','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
 				<div class="span5">	
 					<input type="text" name="address" value="<?php echo set_value('address');?>" id="element"/>
+					<?php echo form_error('address','<span class="error">', '</span><br>');?>
 				</div>
 			</div>	
 			
@@ -59,13 +61,14 @@
 				
 				<div class="span3 text-right">	
 					<label for="zip" class="control-label" width=100%>Zip Code</label>
-					<?php echo form_error('zip','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
 				<div class="span5">			
 					<input type="text" name="zip" value="<?php echo set_value('zip');?>" id="element"/>
+					<?php echo form_error('zip','<span class="error">', '</span><br>');?>
 				</div>
 			</div>	
 			
@@ -74,13 +77,14 @@
 			<div class="row-fluid">
 				<div class="span3 text-right">	
 					<label for="city" width=100%>City</label>
-					<?php echo form_error('city','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
 				<div class="span5">
 					<input type="text" name="city" value="<?php echo set_value('city');?>" id="element"/>
+					<?php echo form_error('city','<span class="error">', '</span><br>');?>
 				</div>
 			</div>	
 			
@@ -89,14 +93,14 @@
 			<div class="row-fluid">
 				<div class="span3 text-right">		
 					<label for="country" width=100%>Country</label>
-					<?php echo form_error('city','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
 				<div class="span5">
 					<select name="country" onChange="set_id(this);" id="element">
-						<option selected="selected"><?php echo set_value('country', 'France');?>
+						<option selected="selected" disabled><?php echo set_value('country', 'Select country');?>
 						<option disabled>-----------------
 					
 						
@@ -105,7 +109,8 @@
 							<option><?php echo $co->name;?>
 						
 						<?php endforeach?>
-					</select>		
+					</select>	
+					<?php echo form_error('city','<span class="error">', '</span><br>');?>	
 				</div>
 			</div>	
 			
@@ -114,14 +119,15 @@
 			<div class="row-fluid">
 				<div class="span3 text-right">			
 					<label for="description" width=100%>Description</label>
-					<?php echo form_error('description','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
 				<div class="span5">	
 						<textarea name="description" value="<?php echo set_value('description');?>" id="element">
-							</textarea>
+						</textarea>
+						<?php echo form_error('description','<span class="error">', '</span>');?>
 				</div>
 			</div>	
 			
@@ -130,13 +136,24 @@
 			<div class="row-fluid">
 				<div class="span3 text-right">		
 					<label for="type" width=100%>Type of shop</label>
-					<?php echo form_error('type','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
 				<div class="span5">		
-						<input type="text" name="type" value="<?php echo set_value('type');?>" id="element"/>
+						<select name="type" onChange="set_id(this);" id="element">
+						<option selected="selected" disabled><?php echo set_value('type', 'Select type');?>
+						<option disabled>-----------------
+					
+						
+						<?php foreach($type as $ty):?>  
+					
+							<option><?php echo $ty;?>
+						
+						<?php endforeach?>
+					</select>	
+					<?php echo form_error('type','<span class="error">', '</span><br>');?>	
 				</div>
 			</div>	
 			
@@ -145,13 +162,14 @@
 			<div class="row-fluid">
 				<div class="span3 text-right">		
 					<label for="type" width=100%>Picture</label>
-					<?php echo form_error('file','<br><span class="error">', '</span>');?>
+					
 				</div>
 				
 				<div class="span1"></div>
 				
-				<div class="span5">		
+				<div class="span5" id="picture">		
 						<input type="file" name="image" size="20" />
+						<?php echo form_error('file','<span class="error">', '</span><br>');?>
 				</div>
 			</div>	
 			
@@ -163,7 +181,7 @@
 				<div class="span4"></div>
 				<div class="span5">			
 					
-					<button class="btn btn-success btn-block" type="submit" id="element"/>Add</button>
+					<button class="btn btn-success btn-block " type="submit" id="element"/><span class="glyphicon glyphicon-star"></span>Add</button>
 				</div>
 				
 			</div>

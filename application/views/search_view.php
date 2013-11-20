@@ -24,15 +24,18 @@
 				<div class="span6">
 					<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo.png" width="35%" /> </a>
 				</div>
-				<div class="span5">
+				<div class="span5 text-right">
+					<?php $session_id = $this->session->userdata('logged');
+					if($session_id == true): ?>
 					
+					<a href="<?php echo base_url()?>administrate" id="logged">Administrate</a>
+					<a href="<?php echo base_url()?>login/logout" id="logged">Log Out</a>
 					
-					Name of the Shop <?php echo $shops[1]['name'];?><br>
-					Address <?php echo $shops[1]['address'];?><br>
-					Zip Code <?php echo $shops[1]['zip'];?><br>
-					City <?php echo $shops[1]['city'];?><br>
-					Country <?php echo $shops[1]['country'];?><br>
-					Description <?php echo $shops[1]['description'];?><br>
+					<?php else:?>
+						
+						<a href="<?php echo base_url()?>login" id="login">Login</a>
+					
+					<?php endif;?>
 				</div>
 				
 			</div>

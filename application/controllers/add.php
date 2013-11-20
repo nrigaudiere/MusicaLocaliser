@@ -11,8 +11,10 @@ class Add extends CI_Controller
     public function index()
     {
     	$country = $this->dataaccess->getCountries();
+		$types = $this->dataaccess->getTypes();
 		
 		$data['country'] = $country;
+		$data['type'] = $types;
 		
     	$this->load->view('header_view');
 		$this->load->view('add_view', $data);
@@ -86,7 +88,9 @@ class Add extends CI_Controller
 				$this->index();
 			}
 			
-		}
+		}else{
+				$this->index();
+			}
 	}			
 
 }

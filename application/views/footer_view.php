@@ -15,9 +15,9 @@
 					<a href="https://twitter.com" target="_blank"><img src="<?php echo base_url();?>/assets/img/misc/twitter.png" alt="Twitter Logo"></a>
 				
 			<br><br>	
-					<a href="#" onClick="window.open('<?php echo site_url("footer/apropos");?>', 'About', 'width=850, height=300, status=no, left=50% , top=25%'); return false;">About</a>
+					<a href="#" onClick="window.open('<?php echo site_url("about");?>', 'About', 'width=850, height=300, status=no, left=50% , top=25%'); return false;">About</a>
 					|
-					<a href="#" onClick="window.open('<?php echo site_url("footer/infosleg");?>', 'Legal Informations', 'width=850, height=300, status=no, left=50% , top=25%'); return false;">Legal Informations</a>
+					<a href="#" onClick="window.open('<?php echo site_url("about");?>', 'Legal Informations', 'width=850, height=300, status=no, left=50% , top=25%'); return false;">Legal Informations</a>
 					|
 					<a href="<?php echo site_url("contact");?>">Contact Us</a>		
 				

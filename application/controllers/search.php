@@ -33,6 +33,7 @@ class Search extends CI_Controller
 		$marker = array(); 
 		
 		$marker['icon'] = base_url().'/assets/img/misc/marker.png';
+		$marker['clickable'] = false;
 		 
 		$this->googlemaps->add_marker($marker);
 		
@@ -54,7 +55,7 @@ class Search extends CI_Controller
 											$shop['address'] ."<br>"  . 
 											$shop['zip'] .", "  . 
 											$shop['city'] ."<br>"  . 
-											$shop['country'] ."<br>"  . 
+											$shop['country'] ."<br><br>"  . 
 											$shop['description'];
 			$this->googlemaps->add_marker($marker);
 			
